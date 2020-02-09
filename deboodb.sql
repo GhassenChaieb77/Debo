@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 09 fév. 2020 à 10:58
--- Version du serveur :  10.4.10-MariaDB
--- Version de PHP :  7.3.12
+-- Généré le :  Dim 09 fév. 2020 à 21:15
+-- Version du serveur :  5.7.24
+-- Version de PHP :  7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -76,15 +76,22 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 DROP TABLE IF EXISTS `claim`;
 CREATE TABLE IF NOT EXISTS `claim` (
-  `idRec` int(8) NOT NULL,
-  `date` date NOT NULL,
+  `idRec` int(8) NOT NULL AUTO_INCREMENT,
   `message` varchar(100) NOT NULL,
   `answer` varchar(100) NOT NULL,
   `status` varchar(10) NOT NULL,
   `cin` int(8) NOT NULL,
   PRIMARY KEY (`idRec`),
   KEY `cin` (`cin`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `claim`
+--
+
+INSERT INTO `claim` (`idRec`, `message`, `answer`, `status`, `cin`) VALUES
+(5, 'mriguel', 'pas mal', 'solved', 123654789),
+(6, 'service ki **', 'lll', 'en attente', 12345678);
 
 -- --------------------------------------------------------
 
@@ -232,7 +239,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`cin`, `lastName`, `firstName`, `phone1`, `phone2`, `login`, `password`, `role`) VALUES
 (12345678, 'laribi', 'mohamed amine', 58891853, 0, 'amine22', 'amine227', 'client'),
-(14764402, 'null', 'null', 0, 0, 'admin', 'system', 'admin');
+(14764402, 'null', 'null', 0, 0, 'admin', 'system', 'admin'),
+(123654789, 'nounou', 'douda', 24938486, 24938486, 'nounou', '123', 'client');
 
 --
 -- Contraintes pour les tables déchargées
