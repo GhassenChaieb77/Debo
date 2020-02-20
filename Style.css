@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18 févr. 2020, 13:26:27
+    Author     : Asus
+*/
+#deco{
+    -fx-background-color: #303030;
+    
+}
+#centre{
+	-fx-background-color: #303030;
+}
+#pane_top{
+	-fx-background-color: #303030;
+        background-image:url(views/fond.jpg);
+}
+#label_title{
+	-fx-text-fill: white;
+}
+#tbview{
+    -fx-background-color: #FBF2B7;
+}
+#anchorpane_center, #anchorpane_left, #anchorpane_right{
+	-fx-border-style: dotted;
+        -fx-background-color: #FEBFD2;
+
+       -fx-background-image: url("fond.jpg");
+}
+#btn_save, #btn_add_new{
+	-fx-background-color: #FD6C9E;
+}
+#btn_edit{
+	-fx-background-color: orange;
+}
+#btn_delete{
+	-fx-background-color: #FD3F92;
+}
+#btn_print{
+	-fx-background-color: #FF4500;
+}
+
+.jfx-button{
+	-fx-opacity: 0.9;
+	-fx-text-fill: white;
+}
+.jfx-button:hover{
+	-fx-opacity: 1;
+}
+#btn_position{
+	-fx-text-fill: black;
+}

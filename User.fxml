@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import impl.org.controlsfx.skin.DecorationPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane_centre" prefHeight="490.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <AnchorPane fx:id="pane_top" layoutX="-6.0" layoutY="-3.0" prefHeight="84.0" prefWidth="770.0">
+         <children>
+            <Label layoutX="137.0" layoutY="10.0" text="DEBOO" textFill="#ebdede">
+               <font>
+                  <Font name="Atlane" size="47.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img" fitHeight="77.0" fitWidth="128.0" layoutX="16.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorpane_center" layoutX="-4.0" layoutY="78.0" prefHeight="440.0" prefWidth="770.0">
+         <children>
+            <JFXTextField fx:id="txt_message" focusColor="#ffac1e" layoutX="28.0" layoutY="14.0" prefHeight="177.0" prefWidth="235.0" text="Your Claim" unFocusColor="#bce50e">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="tbview" layoutX="406.0" layoutY="46.0" prefHeight="380.0" prefWidth="354.0">
+              <columns>
+                <TableColumn fx:id="column_answer" minWidth="0.0" prefWidth="156.0" text="Answer" />
+                  <TableColumn fx:id="column_status" minWidth="0.0" prefWidth="77.0" text="Status" />
+                <TableColumn fx:id="column_message" prefWidth="141.0" text="Message" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btn_save" layoutX="88.0" layoutY="203.0" prefHeight="35.0" prefWidth="90.0" text="Save" />
+            <Rating fx:id="note" layoutX="28.0" layoutY="369.0" prefHeight="25.0" prefWidth="178.0" rating="0.0">
+               <effect>
+                  <DropShadow color="#4e1fa3" spread="0.64">
+                     <input>
+                        <DropShadow color="#4184ba" />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Rating>
+            <DecorationPane fx:id="deco" layoutX="380.0" layoutY="-14.0" prefHeight="452.0" prefWidth="14.0" />
+            <JFXButton fx:id="add" layoutX="229.0" layoutY="401.0" onAction="#noter" prefHeight="25.0" prefWidth="58.0" text="ADD" />
+            <JFXTextField layoutX="21.0" layoutY="315.0" text="Rating an employee :">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
